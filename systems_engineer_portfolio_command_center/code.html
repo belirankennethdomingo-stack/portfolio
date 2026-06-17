@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SYS_ARCHITECT_V1.0 | Industrial Engineering Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#be0000",
+                      "on-secondary": "#690006",
+                      "secondary": "#ffb4ab",
+                      "on-primary-fixed-variant": "#930000",
+                      "inverse-surface": "#e5e2e1",
+                      "on-surface": "#e5e2e1",
+                      "on-background": "#e5e2e1",
+                      "primary": "#ffb4a8",
+                      "on-secondary-fixed-variant": "#93000c",
+                      "tertiary-container": "#5e5d5d",
+                      "background": "#131313",
+                      "surface-container-highest": "#353534",
+                      "primary-fixed": "#ffdad4",
+                      "on-error": "#690005",
+                      "on-primary": "#690000",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed": "#410000",
+                      "outline-variant": "#5d3f3b",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "surface-variant": "#353534",
+                      "on-secondary-fixed": "#410002",
+                      "on-surface-variant": "#e7bdb6",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-dim": "#131313",
+                      "surface-tint": "#ffb4a8",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#d30017",
+                      "tertiary-fixed": "#e5e2e1",
+                      "tertiary": "#c8c6c5",
+                      "on-tertiary-container": "#d9d6d6",
+                      "on-primary-container": "#ffcac2",
+                      "on-tertiary": "#313030",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-bright": "#3a3939",
+                      "surface-container-high": "#2a2a2a",
+                      "error-container": "#93000a",
+                      "surface": "#131313",
+                      "secondary-fixed-dim": "#ffb4ab",
+                      "inverse-on-surface": "#313030",
+                      "secondary-fixed": "#ffdad6",
+                      "inverse-primary": "#c00301",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-secondary-container": "#ffe2de",
+                      "outline": "#ad8882",
+                      "surface-container": "#201f1f",
+                      "on-tertiary-fixed-variant": "#474746"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "unit": "4px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Inter"],
+                      "label-mono": ["JetBrains Mono"],
+                      "headline-lg-mobile": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "data-display": ["JetBrains Mono"],
+                      "headline-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-mono": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "data-display": ["24px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(190, 0, 0, 0.15), inset 0 0 1px rgba(190, 0, 0, 0.5);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(190, 0, 0, 0.3);
+            border-color: #be0000;
+        }
+        .scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+        .led-pulse {
+            animation: pulse-led 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-led {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+        }
+        .glass-panel {
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-white font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-background">SYS_ARCHITECT_V1.0</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#about">About</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#skills">Skills</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#projects">Projects</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#certifications">Certifications</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-container rounded-full led-pulse"></span>
+<span class="font-label-mono text-label-mono text-primary">SYSTEM STATUS: ACTIVE</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col items-center justify-center pt-24 overflow-hidden">
+<!-- STITCH_SHADER_START:ANIMATION_3 class="absolute inset-0 w-full h-full opacity-40" -->
+<div class="absolute inset-0 w-full h-full opacity-40" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_3" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_3');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+    uv.x *= u_resolution.x / u_resolution.y;
+    
+    // Grid calculation
+    float grid_size = 30.0;
+    vec2 grid = fract(uv * grid_size);
+    float line = smoothstep(0.02, 0.0, abs(grid.x - 0.5)) + smoothstep(0.02, 0.0, abs(grid.y - 0.5));
+    
+    // Pulse effect
+    float pulse = sin(u_time * 0.5 + uv.x * 2.0 + uv.y * 2.0) * 0.5 + 0.5;
+    vec3 baseColor = vec3(0.05, 0.05, 0.05); // Charcoal
+    vec3 accentColor = vec3(0.75, 0.0, 0.0); // Crimson
+    
+    vec3 color = mix(baseColor, accentColor * 0.15, line * pulse);
+    
+    // Vignette
+    float d = distance(uv, vec2(0.5 * u_resolution.x / u_resolution.y, 0.5));
+    color *= smoothstep(1.2, 0.4, d);
+    
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_3 -->
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 px-margin-desktop max-w-container-max mx-auto items-center">
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="font-label-mono text-label-mono text-primary-container px-3 py-1 border border-primary-container/30 bg-primary-container/10 inline-block">ENGINEERING ARCHIVE // V1.0</span>
+<h1 class="font-headline-xl text-headline-xl text-on-background max-w-xl">
+                        Building Smarter Systems Through Data and <span class="text-primary-container">Process Thinking</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Industrial Engineering Graduate &amp; Systems Thinking Practitioner focused on optimizing complex environments through analytical precision.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-white px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest hover:brightness-110 transition-all active:opacity-70">View Projects</button>
+<button class="border border-outline-variant hover:border-primary-container px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant hover:text-white transition-all neon-glow">Download Resume</button>
+</div>
+</div>
+<div class="relative flex justify-center">
+<div class="relative w-[400px] h-[550px] group">
+<!-- Dashboard Widget Overlay -->
+<div class="absolute -top-10 -left-10 z-20 glass-panel p-4 w-48 space-y-2 animate-bounce transition-all duration-1000" style="animation-duration: 4s;">
+<span class="font-label-mono text-[10px] text-primary">OPEX_METRIC</span>
+<div class="text-2xl font-data-display text-white">+14.2%</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[70%]"></div>
+</div>
+</div>
+<div class="absolute -bottom-6 -right-10 z-20 glass-panel p-4 w-56 space-y-2">
+<div class="flex justify-between items-center">
+<span class="font-label-mono text-[10px] text-on-surface-variant">LATEST_LOG</span>
+<span class="material-symbols-outlined text-[12px] text-primary">monitoring</span>
+</div>
+<div class="text-sm font-label-mono text-white opacity-80">Process Opt Complete</div>
+<div class="text-[10px] font-label-mono text-primary">02:44:12 GMT</div>
+</div>
+<div class="absolute inset-0 bg-primary-container/10 border border-primary-container/20 translate-x-4 translate-y-4"></div>
+<img alt="Industrial Engineering Professional" class="w-full h-full object-cover relative z-10 border border-outline grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjcVSaejWzoBqKI3qRSMSL9KFp_pxXMn_KtOQchhRSXGhd8RvUAkTFrGDkOJlv-AqFHdGwX1eVm2TIswwXAk2xJEwo_QjVbIWWUNtjJ-EmH__y68pyZKNY2Vyctjt9ssswYHtEYHxFEz_UwzSTyE5nO4__lqzp1gUZIWHVUUKd75pv-NvqSyhirsJd-LrrsuPblc3iEnz7420DGygZCZyeK9cS-itE0sE9L1-CYDeycwN_2rGZMoq9wg9fUuPsYrSM6nl8_7BVp3Y"/>
+<!-- KPI Widgets via ThreeJS -->
+<!-- STITCH_THREEJS_START:ANIMATION_4 class="absolute inset-0 z-30 pointer-events-none" -->
+<div class="absolute inset-0 z-30 pointer-events-none" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_4" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_4');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js Scene: Floating KPI Widgets
+const scene = new THREE.Scene();
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+
+renderer.setSize(width, height);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+const pointLight = new THREE.PointLight(0xbe0000, 2);
+pointLight.position.set(5, 5, 5);
+scene.add(pointLight);
+
+// KPI Widget Geometry (Simplified 3D cards)
+const widgets = [];
+const geometry = new THREE.BoxGeometry(1.2, 0.8, 0.05);
+const material = new THREE.MeshPhongMaterial({ 
+    color: 0x1c1b1b, 
+    transparent: true, 
+    opacity: 0.8,
+    emissive: 0xbe0000,
+    emissiveIntensity: 0.2
+});
+
+for (let i = 0; i < 4; i++) {
+    const mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(
+        (Math.random() - 0.5) * 6,
+        (Math.random() - 0.5) * 4,
+        (Math.random() - 0.5) * 2
+    );
+    mesh.rotation.x = Math.random() * Math.PI;
+    mesh.rotation.y = Math.random() * Math.PI;
+    scene.add(mesh);
+    widgets.push({
+        mesh,
+        speed: 0.005 + Math.random() * 0.01,
+        rotSpeed: 0.01
+    });
+}
+
+camera.position.z = 5;
+
+function animate() {
+    requestAnimationFrame(animate);
+    widgets.forEach(w => {
+        w.mesh.rotation.y += w.rotSpeed;
+        w.mesh.position.y += Math.sin(Date.now() * 0.001 * w.speed) * 0.005;
+    });
+    renderer.render(scene, camera);
+}
+
+window.addEventListener('resize', () => {
+    const w = container.clientWidth || window.innerWidth;
+    const h = container.clientHeight || window.innerHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+});
+
+animate();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_4 -->
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Banner (Marquee) -->
+<section class="py-12 bg-surface-container-lowest border-y border-outline-variant overflow-hidden" id="skills">
+<div class="flex animate-marquee whitespace-nowrap gap-16 items-center">
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">EXCEL DASHBOARDS</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60">POWER BI</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">SQL QUERIES</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60">PYTHON ANALYTICS</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">LEAN SIX SIGMA</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60">OPERATIONS RESEARCH</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">SUPPLY CHAIN</span>
+<!-- Duplicated for seamless loop -->
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">EXCEL DASHBOARDS</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60">POWER BI</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">SQL QUERIES</span>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-4">
+<div class="sticky top-24 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-background border-l-4 border-primary-container pl-6 uppercase tracking-tight">System<br/>Introduction</h2>
+<p class="font-label-mono text-label-mono text-primary">CORE_COMPETENCY: OPTIMIZATION</p>
+</div>
+</div>
+<div class="lg:col-span-8 space-y-12">
+<div class="glass-panel p-8 space-y-6">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                        I am a graduate trained to understand real-world systems and improve them using analysis, structure, and technology. Unlike general management or pure engineering, I bridge the gap between <span class="text-primary-container">raw data and operational efficiency</span>.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        My approach is rooted in the synthesis of mathematical modeling and human-centric process design. Every system is a collection of bottlenecks waiting to be identified and eliminated.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="border border-outline-variant p-6 space-y-4 bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container">factory</span>
+<h3 class="font-label-mono text-label-mono font-bold uppercase">Industrial &amp; Ops</h3>
+</div>
+<ul class="space-y-2 font-label-mono text-[11px] text-on-surface-variant">
+<li>• Lean Manufacturing (5S, Kaizen)</li>
+<li>• Inventory Control &amp; Warehousing</li>
+<li>• Simulation Modeling (Arena/Simio)</li>
+<li>• Quality Management Systems</li>
+</ul>
+</div>
+<div class="border border-outline-variant p-6 space-y-4 bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container">database</span>
+<h3 class="font-label-mono text-label-mono font-bold uppercase">Data &amp; Analytics</h3>
+</div>
+<ul class="space-y-2 font-label-mono text-[11px] text-on-surface-variant">
+<li>• Statistical Analysis (R/Minitab)</li>
+<li>• SQL Data Extraction</li>
+<li>• Power BI / Tableau Viz</li>
+<li>• Predictive Modeling (Python)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto" id="projects">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label-mono text-label-mono text-primary-container uppercase">Operational Case Studies</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">System Deployments</h2>
+</div>
+<div class="hidden md:block font-label-mono text-label-mono text-on-surface-variant">05_ACTIVE_ENTRIES</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Project 1 -->
+<div class="group border border-outline-variant bg-surface-container-low overflow-hidden hover:border-primary-container/50 transition-all">
+<div class="h-48 overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale" data-alt="A wide cinematic shot of a high-tech automated warehouse logistics hub with robotic arms and orange floor markers. The atmosphere is industrial and dark with cinematic lighting from ceiling panels, casting deep shadows and emphasizing mechanical precision. Deep crimson accents glow from sensor arrays, matching a futuristic command center aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZRa0cCpcStkPpLczRLtUNFE4k8NsglYqO3MyKv-dvQSnGOXe0d5pGd7lWrUWpiMK6jJqHrz0dwR91LfIqZ0B9LvO6b0YWyejbTNlTh7au9J0NpGFUkTIwFa5E1hnTrDD4l0IFpnOhrVZAGpYmrhyfWj3kEMrzR4Jsd2SFXLNyXRwXroS2x9FeFZlcTM4ipdUdM3rI7R8xnW3LfA2gE0OSaEkqwNmsl-e4WVFX04KrxQ0OOtWDznp-1TRwFTJfpos31M0-eyce59o"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-lg text-body-lg font-bold">Supply Chain System</h3>
+<span class="text-primary-container text-[10px] font-label-mono border border-primary-container px-2 py-0.5">OPTIMIZED</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-2">Optimization of multi-node distribution network reducing lead time by 18%.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-mono text-[9px] bg-background text-on-surface-variant px-2 py-1 border border-outline-variant">EXCEL VBA</span>
+<span class="font-label-mono text-[9px] bg-background text-on-surface-variant px-2 py-1 border border-outline-variant">LINEAR PROGRAMMING</span>
+</div>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-center">
+<span class="font-label-mono text-[10px] text-primary">ROI: +$42K/ANNUM</span>
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">arrow_forward</button>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group border border-outline-variant bg-surface-container-low overflow-hidden hover:border-primary-container/50 transition-all">
+<div class="h-48 overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale" data-alt="A detailed overhead digital simulation map of a smart parking facility with glowing green and red occupancy sensors. The UI design is sleek and professional, featuring data overlays, coordinate grids, and technical telemetry in the margins. The color palette is dark matte with neon red and white indicator lines, conveying an advanced analytics dashboard feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFAsNbmtgUQnJbuNDtq7iTlj6nz8i3vsIcW-1Qi0Zw5TdpuHa25R4BuTq-ay3FwAdEmEaXH735MgddTsmT8XFIWoAM8e-XtDGM7o6jqfnGVI9KBKdlMNdxA1DIYy79DyVYXI_ZF11WuTx8beKUZrNt1qGXXtBK9RaDyNFvfRgLqjG5vDxB_vZN5ncCUC2RO5aLhm9Wyas6KaMnqnFElU3T6zDbDaRumKsZotv6lNOCx3VjVyIZmIHIdB4LpdNxbDbrTrkkMFSj4aE"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-lg text-body-lg font-bold">Smart Parking Sim</h3>
+<span class="text-on-surface-variant text-[10px] font-label-mono border border-outline-variant px-2 py-0.5">COMPLETED</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-2">Discrete-event simulation of campus parking flow using Simio software.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-mono text-[9px] bg-background text-on-surface-variant px-2 py-1 border border-outline-variant">SIMIO</span>
+<span class="font-label-mono text-[9px] bg-background text-on-surface-variant px-2 py-1 border border-outline-variant">MONTE CARLO</span>
+</div>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-center">
+<span class="font-label-mono text-[10px] text-primary">ACCURACY: 94%</span>
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">arrow_forward</button>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group border border-outline-variant bg-surface-container-low overflow-hidden hover:border-primary-container/50 transition-all">
+<div class="h-48 overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale" data-alt="A professional data analytics dashboard displayed on multiple vertical monitors in a dark control room. High-contrast line charts, heatmaps, and scatter plots fill the screens with deep red and white data points. The lighting is moody and focused, with a clean dark mode interface that highlights structural efficiency and technical depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwYFMsXdB9dGGJORpZgULrGW9IZR8Jf87jyQHfHxx4JHs5yPkMvQXpwGg_V8fv7-g4F91ahORZ7L8qxf15eG1DWc2AciJ0-VwxUEFuxVNIKILPND6cpAxyl9OBVHwbVJyFqOuGfkD9N0GAsXM5paeusf5mKDmXHBa2PaRbpfda1DV9ktmHCa7HzTwIAjZbdQCADKDuEvUrGrw5lvr-hjF9Y355qISCx-naz_TIMQKIDZhCIbag5PpsWrFkxYlgtmtH0NLtBvuP6Pk"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-lg text-body-lg font-bold">Analytics Dashboard</h3>
+<span class="text-primary-container text-[10px] font-label-mono border border-primary-container px-2 py-0.5">LIVE_DATA</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-2">End-to-end Power BI dashboard for real-time manufacturing OEE tracking.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-mono text-[9px] bg-background text-on-surface-variant px-2 py-1 border border-outline-variant">POWER BI</span>
+<span class="font-label-mono text-[9px] bg-background text-on-surface-variant px-2 py-1 border border-outline-variant">DAX</span>
+</div>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-center">
+<span class="font-label-mono text-[10px] text-primary">LATENCY: &lt;5S</span>
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">arrow_forward</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Proof & Evidence Section -->
+<section class="py-margin-desktop bg-surface-container-lowest">
+<div class="px-margin-desktop max-w-container-max mx-auto space-y-16">
+<div class="text-center space-y-2">
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-widest text-on-background">Project Evidence &amp; Work Proof</h2>
+<p class="font-label-mono text-label-mono text-primary-container">VERIFIED_DOCUMENTATION // ARCHIVE_V1.0</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square border border-outline-variant relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" data-alt="A macro close-up of a complex industrial process flow chart printed on high-quality technical paper. The diagram shows interconnected nodes and decision points with clean, minimalist lines. The lighting is dramatic, coming from the side to reveal the texture of the paper and the crispness of the ink, reinforcing an atmosphere of thorough planning and engineering structure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjwvcIKClHhKbWBfKBCODgIh7n5vfVWd3rg2ZzbnugTaeHcjlpMiKxLsuS3IHPxOYK88SYKRTyaSWGIkbWGvONwFLMqPvKPUvUr5g0MpOUE6poNtpaz8IU5CEnEgOA2UEEnfw81ykFWKRekvICAlsE0nlq7QTqiZqE0suFw1oGmr7VJCNxjBP6QzheDHIWmfneVipAulBItpoDMT-b3zfttGzObO-mwtMG1UHSz-KKXOFyZ0s_dKZFWLCNC4KJoIkb55xnPsCSzek"/>
+<div class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<div class="aspect-square border border-outline-variant relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" data-alt="A focused meeting room shot where a young professional is pointing at a whiteboard covered in mathematical equations and system architectures. The background is blurred, keeping the focus on the technical content of the equations. The lighting is cool-toned with sharp shadows, evoking a sense of analytical depth and intellectual rigor in a modern corporate setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC98RK29EMpKuGXXMXtIcLKlsPxjeZg828mZXoLabzqGOU1HczNuZDh89BrLLj9xS8HlBZmaMYCATgrp4gJd_ZYqhgGYGI-2_gNvbztGNeuvCcAmcfnh_UmkaHa73TdTnDInodO96ChcThWbzQ1ExuAtu7Znx0V_Pp4UsKDUSusFG8mjwi8YTVxf4x1qo2FxCswKU13OxfeHA9GqwvddSf_6zK-MklX_RDDI-tuJY-t4Qz-j7xM9B9qv8Oj4-GiH4QjS4g42-KXC1Y"/>
+<div class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<div class="aspect-square border border-outline-variant relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" data-alt="A technician in a clean industrial environment adjusting a high-precision laser sensor on a production line. The scene is dominated by metallic textures and sophisticated hardware. Soft neon red light reflects off the steel surfaces, creating a cinematic, tech-heavy atmosphere that highlights the intersection of physical systems and digital control." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqzV0lEAc7s663iPGKTUBklgg9LxlLIVTI2BprHBwNOFEgNDbKGu6n4MwR3pEFWEOyzpPA1XDfQelxm_Ini64eyUEHUYXSmehVq99dbbgPNO4SJJDV42c3XvCjlD8lQA5mxE-lZYMGhidXeJi4KgDnhX_fjEaFQzXJkuKfpcOppMlCTNZ_JR7Jjca7h2ycrLiK_EOPqh9SjLqzUGWW8yksk7nXf7z9lzduyPpoHY1AAumjhW1-OzGA45mWZ5ROrhP6Kl7CFcA4jeU"/>
+<div class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<div class="aspect-square border border-outline-variant relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" data-alt="A wide-angle interior of a modern data center with rows of server racks illuminated by blinking red and white status LEDs. The perspective is symmetrical, leading to a vanishing point. The air feels cool and clean, and the lighting is dim, emphasizing the massive processing power and the industrial scale of modern digital infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB62RdOYndelnds5xoxlTyDTaeXQPI5iAz2QiYMMdPmW3Pu9F4WuIgvDjr6M3QjlMthRIUC2B2Yiy2bIGLLk5caR_8YN-uop-rpbgNTWr2dcNWmF8MwMozJZzL5BTsjrVZPBHwxeiREDpBf7nGy02EkxoKxI-VWnirQyvS9ecGJAbJQg1fiZYyDvEO4SY9xQEvoTYzScUFXbFmYPq_nvQe36AkB_hjc7xJpe6q_4_r8IsUYBQkf_whOkA6L7aKRjf_YyV69dL2bUA4"/>
+<div class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Workflow Section -->
+<section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="font-label-mono text-label-mono text-primary">MODUS_OPERANDI</span>
+<h2 class="font-headline-lg text-headline-xl">Systematic<br/>Workflow</h2>
+</div>
+<p class="font-body-lg text-on-surface-variant max-w-md">My structured 6-step process for dissecting complexity and rebuilding for maximum performance.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="glass-panel p-6 border-l-2 border-l-primary-container">
+<span class="font-data-display text-primary-container">01</span>
+<h4 class="font-label-mono font-bold mt-2">UNDERSTAND</h4>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Stakeholder empathy &amp; problem framing.</p>
+</div>
+<div class="glass-panel p-6 border-l-2 border-l-primary-container">
+<span class="font-data-display text-primary-container">02</span>
+<h4 class="font-label-mono font-bold mt-2">BREAK DOWN</h4>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">System decomposition &amp; flow mapping.</p>
+</div>
+<div class="glass-panel p-6 border-l-2 border-l-primary-container">
+<span class="font-data-display text-primary-container">03</span>
+<h4 class="font-label-mono font-bold mt-2">COLLECT</h4>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Empirical data gathering &amp; cleanup.</p>
+</div>
+<div class="glass-panel p-6 border-l-2 border-l-primary-container">
+<span class="font-data-display text-primary-container">04</span>
+<h4 class="font-label-mono font-bold mt-2">DESIGN</h4>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Iterative solution prototyping.</p>
+</div>
+<div class="glass-panel p-6 border-l-2 border-l-primary-container">
+<span class="font-data-display text-primary-container">05</span>
+<h4 class="font-label-mono font-bold mt-2">IMPLEMENT</h4>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Phased rollout &amp; change mgmt.</p>
+</div>
+<div class="glass-panel p-6 border-l-2 border-l-primary-container">
+<span class="font-data-display text-primary-container">06</span>
+<h4 class="font-label-mono font-bold mt-2">EVALUATE</h4>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Performance audits &amp; feedback loops.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section class="py-margin-desktop bg-surface-container-high" id="certifications">
+<div class="px-margin-desktop max-w-container-max mx-auto space-y-12">
+<h2 class="font-headline-lg text-headline-lg border-b border-outline-variant pb-6">Verified Qualifications</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-background p-6 space-y-4 border border-outline-variant neon-glow">
+<span class="material-symbols-outlined text-primary-container text-4xl" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<h3 class="font-label-mono text-label-mono font-bold">Data &amp; Analytics Professional</h3>
+<p class="text-[11px] text-on-surface-variant font-label-mono">Google Data Analytics Professional Certificate</p>
+</div>
+<div class="bg-background p-6 space-y-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary-container text-4xl">manufacturing</span>
+<h3 class="font-label-mono text-label-mono font-bold">Six Sigma Yellow Belt</h3>
+<p class="text-[11px] text-on-surface-variant font-label-mono">Council for Six Sigma Certification (CSSC)</p>
+</div>
+<div class="bg-background p-6 space-y-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary-container text-4xl">terminal</span>
+<h3 class="font-label-mono text-label-mono font-bold">Python for Engineering</h3>
+<p class="text-[11px] text-on-surface-variant font-label-mono">Coursera Specialization - IBM</p>
+</div>
+<div class="bg-background p-6 space-y-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary-container text-4xl">inventory_2</span>
+<h3 class="font-label-mono text-label-mono font-bold">Supply Chain Ops</h3>
+<p class="text-[11px] text-on-surface-variant font-label-mono">Rutgers Business School Certification</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Analytics Command Center -->
+<section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto">
+<div class="glass-panel p-12 border border-primary-container/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8">
+<span class="font-label-mono text-[10px] text-primary-container">LIVE_TELEMETRY</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="space-y-6">
+<h2 class="font-headline-lg text-headline-lg">Command<br/>Center</h2>
+<p class="font-label-mono text-on-surface-variant text-sm">Visualizing my impact through quantitative performance indicators.</p>
+</div>
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 border border-outline-variant bg-surface-container-highest">
+<div class="font-label-mono text-[10px] text-on-surface-variant">EFFICIENCY_GAIN</div>
+<div class="font-data-display text-4xl mt-2">22%</div>
+<div class="h-1 bg-primary-container mt-4 w-3/4"></div>
+</div>
+<div class="p-6 border border-outline-variant bg-surface-container-highest">
+<div class="font-label-mono text-[10px] text-on-surface-variant">COST_REDUCTION</div>
+<div class="font-data-display text-4xl mt-2">$85K</div>
+<div class="h-1 bg-primary-container mt-4 w-1/2"></div>
+</div>
+<div class="p-6 border border-outline-variant bg-surface-container-highest">
+<div class="font-label-mono text-[10px] text-on-surface-variant">DATA_FIDELITY</div>
+<div class="font-data-display text-4xl mt-2">99.8%</div>
+<div class="h-1 bg-primary-container mt-4 w-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-12">
+<div class="space-y-4">
+<h2 class="font-headline-xl text-headline-xl">Initiate<br/>Communication</h2>
+<p class="font-body-lg text-on-surface-variant max-w-sm">Ready to discuss how my systems-driven approach can optimize your organization's output.</p>
+</div>
+<div class="space-y-4 font-label-mono">
+<div class="flex items-center gap-4 group cursor-pointer">
+<span class="w-10 h-10 flex items-center justify-center border border-outline-variant group-hover:border-primary-container transition-all">
+<span class="material-symbols-outlined text-sm text-primary">mail</span>
+</span>
+<span class="text-on-surface hover:text-primary transition-colors">ARCHITECT@SYSTEMS.LOG</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<span class="w-10 h-10 flex items-center justify-center border border-outline-variant group-hover:border-primary-container transition-all">
+<span class="material-symbols-outlined text-sm text-primary">link</span>
+</span>
+<span class="text-on-surface hover:text-primary transition-colors">LINKEDIN/IN/SYSARCHITECT</span>
+</div>
+</div>
+</div>
+<div class="glass-panel p-8 md:p-12">
+<form class="space-y-6" onsubmit="event.preventDefault()">
+<div class="space-y-1">
+<label class="font-label-mono text-[10px] text-on-surface-variant uppercase">SENDER_NAME</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary-container transition-all outline-none py-3 text-on-surface px-0" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-mono text-[10px] text-on-surface-variant uppercase">SENDER_ORG</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary-container transition-all outline-none py-3 text-on-surface px-0" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-mono text-[10px] text-on-surface-variant uppercase">SYSTEM_QUERY</label>
+<textarea class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary-container transition-all outline-none py-3 text-on-surface px-0 resize-none" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-white py-4 font-label-mono uppercase tracking-[0.2em] hover:brightness-110 active:scale-95 transition-all">Transmit Message</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop py-margin-mobile max-w-container-max mx-auto">
+<div class="flex flex-col justify-center gap-2">
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest">SYS_ARCHITECT_V1.0</span>
+<p class="font-label-mono text-label-mono text-on-tertiary-fixed-variant">© 2024 SYSTEM_ARCHITECT // ALL RIGHTS RESERVED</p>
+</div>
+<div class="flex md:justify-end items-center gap-8 font-label-mono text-label-mono">
+<a class="text-on-tertiary-fixed-variant hover:text-primary transition-all" href="#">Privacy Protocol</a>
+<a class="text-on-tertiary-fixed-variant hover:text-primary transition-all" href="#">Security Logs</a>
+<a class="text-on-tertiary-fixed-variant hover:text-primary transition-all" href="#">Terminal Access</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Interactive scroll reveals for panels
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.glass-panel, .border-outline-variant').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'translate-y-10', 'opacity-0');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
