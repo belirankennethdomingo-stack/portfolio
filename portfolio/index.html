@@ -278,85 +278,6 @@ void main() {
 
 
 <img alt="Industrial Engineering Professional" class="w-full h-full object-cover relative z-10 border border-outline grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjcVSaejWzoBqKI3qRSMSL9KFp_pxXMn_KtOQchhRSXGhd8RvUAkTFrGDkOJlv-AqFHdGwX1eVm2TIswwXAk2xJEwo_QjVbIWWUNtjJ-EmH__y68pyZKNY2Vyctjt9ssswYHtEYHxFEz_UwzSTyE5nO4__lqzp1gUZIWHVUUKd75pv-NvqSyhirsJd-LrrsuPblc3iEnz7420DGygZCZyeK9cS-itE0sE9L1-CYDeycwN_2rGZMoq9wg9fUuPsYrSM6nl8_7BVp3Y"/>
-<!-- KPI Widgets via ThreeJS -->
-<!-- STITCH_THREEJS_START:ANIMATION_4 class="absolute inset-0 z-30 pointer-events-none" -->
-<div class="absolute inset-0 z-30 pointer-events-none" style="display:block;">
-<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
-<div id="threejs-container-ANIMATION_4" style="width:100%;height:100%"></div>
-<script>
-(function() {
-  const container = document.getElementById('threejs-container-ANIMATION_4');
-  const devicePixelRatio = window.devicePixelRatio || 1;
-  // Three.js Scene: Floating KPI Widgets
-const scene = new THREE.Scene();
-const width = container.clientWidth || window.innerWidth;
-const height = container.clientHeight || window.innerHeight;
-const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-
-renderer.setSize(width, height);
-renderer.setPixelRatio(window.devicePixelRatio);
-container.appendChild(renderer.domElement);
-
-// Lighting
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-scene.add(ambientLight);
-const pointLight = new THREE.PointLight(0xbe0000, 2);
-pointLight.position.set(5, 5, 5);
-scene.add(pointLight);
-
-// KPI Widget Geometry (Simplified 3D cards)
-const widgets = [];
-const geometry = new THREE.BoxGeometry(1.2, 0.8, 0.05);
-const material = new THREE.MeshPhongMaterial({ 
-    color: 0x1c1b1b, 
-    transparent: true, 
-    opacity: 0.8,
-    emissive: 0xbe0000,
-    emissiveIntensity: 0.2
-});
-
-for (let i = 0; i < 4; i++) {
-    const mesh = new THREE.Mesh(geometry, material);
-    mesh.position.set(
-        (Math.random() - 0.5) * 6,
-        (Math.random() - 0.5) * 4,
-        (Math.random() - 0.5) * 2
-    );
-    mesh.rotation.x = Math.random() * Math.PI;
-    mesh.rotation.y = Math.random() * Math.PI;
-    scene.add(mesh);
-    widgets.push({
-        mesh,
-        speed: 0.005 + Math.random() * 0.01,
-        rotSpeed: 0.01
-    });
-}
-
-camera.position.z = 5;
-
-function animate() {
-    requestAnimationFrame(animate);
-    widgets.forEach(w => {
-        w.mesh.rotation.y += w.rotSpeed;
-        w.mesh.position.y += Math.sin(Date.now() * 0.001 * w.speed) * 0.005;
-    });
-    renderer.render(scene, camera);
-}
-
-window.addEventListener('resize', () => {
-    const w = container.clientWidth || window.innerWidth;
-    const h = container.clientHeight || window.innerHeight;
-    camera.aspect = w / h;
-    camera.updateProjectionMatrix();
-    renderer.setSize(w, h);
-});
-
-animate();
-})();
-</script>
-</div>
-<!-- STITCH_THREEJS_END:ANIMATION_4 -->
 </div>
 </div>
 </div>
@@ -422,10 +343,8 @@ animate();
 <section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto" id="projects">
 <div class="flex justify-between items-end mb-16">
 <div>
-<span class="font-label-mono text-label-mono text-primary-container uppercase">Operational Case Studies</span>
 <h2 class="font-headline-lg text-headline-lg text-on-background">System Deployments</h2>
 </div>
-<div class="hidden md:block font-label-mono text-label-mono text-on-surface-variant">05_ACTIVE_ENTRIES</div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Project 1 -->
@@ -446,7 +365,7 @@ animate();
 </div>
 <div class="pt-4 border-t border-outline-variant flex justify-between items-center">
 <span class="font-label-mono text-[10px] text-primary">ROI: +$42K/ANNUM</span>
-<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">arrow_forward</button>
+<a href="case-study-preview.html" class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">arrow_forward</a>
 </div>
 </div>
 </div>
@@ -468,7 +387,7 @@ animate();
 </div>
 <div class="pt-4 border-t border-outline-variant flex justify-between items-center">
 <span class="font-label-mono text-[10px] text-primary">ACCURACY: 94%</span>
-<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">arrow_forward</button>
+<a href="#" class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">arrow_forward</a>
 </div>
 </div>
 </div>
@@ -599,37 +518,6 @@ animate();
 <span class="material-symbols-outlined text-primary-container text-4xl">inventory_2</span>
 <h3 class="font-label-mono text-label-mono font-bold">Supply Chain Ops</h3>
 <p class="text-[11px] text-on-surface-variant font-label-mono">Rutgers Business School Certification</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Analytics Command Center -->
-<section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto">
-<div class="glass-panel p-12 border border-primary-container/20 relative overflow-hidden">
-<div class="absolute top-0 right-0 p-8">
-<span class="font-label-mono text-[10px] text-primary-container">LIVE_TELEMETRY</span>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-<div class="space-y-6">
-<h2 class="font-headline-lg text-headline-lg">Command<br/>Center</h2>
-<p class="font-label-mono text-on-surface-variant text-sm">Visualizing my impact through quantitative performance indicators.</p>
-</div>
-<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="p-6 border border-outline-variant bg-surface-container-highest">
-<div class="font-label-mono text-[10px] text-on-surface-variant">EFFICIENCY_GAIN</div>
-<div class="font-data-display text-4xl mt-2">22%</div>
-<div class="h-1 bg-primary-container mt-4 w-3/4"></div>
-</div>
-<div class="p-6 border border-outline-variant bg-surface-container-highest">
-<div class="font-label-mono text-[10px] text-on-surface-variant">COST_REDUCTION</div>
-<div class="font-data-display text-4xl mt-2">$85K</div>
-<div class="h-1 bg-primary-container mt-4 w-1/2"></div>
-</div>
-<div class="p-6 border border-outline-variant bg-surface-container-highest">
-<div class="font-label-mono text-[10px] text-on-surface-variant">DATA_FIDELITY</div>
-<div class="font-data-display text-4xl mt-2">99.8%</div>
-<div class="h-1 bg-primary-container mt-4 w-full"></div>
-</div>
 </div>
 </div>
 </div>

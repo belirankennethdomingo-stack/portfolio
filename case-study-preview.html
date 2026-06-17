@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CASE STUDY | Supply Chain Visibility System</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#be0000",
+                      "on-surface": "#e5e2e1",
+                      "on-background": "#e5e2e1",
+                      "primary": "#ffb4a8",
+                      "background": "#131313",
+                      "surface-container-highest": "#353534",
+                      "on-surface-variant": "#e7bdb6",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-container": "#201f1f",
+                      "outline-variant": "#5d3f3b"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Inter"],
+                      "label-mono": ["JetBrains Mono"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "data-display": ["JetBrains Mono"],
+                      "headline-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-mono": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "data-display": ["24px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(190, 0, 0, 0.15), inset 0 0 1px rgba(190, 0, 0, 0.5);
+        }
+        .glass-panel {
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .led-pulse {
+            animation: pulse-led 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-led {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+        }
+</style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-white font-body-md overflow-x-hidden">
+
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant">
+    <div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-background hover:text-primary transition-colors cursor-pointer">
+                KENNETH'S PORTFOLIO
+            </a>
+        </div>
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm">arrow_back</span>
+                RETURN HOME
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Header Section -->
+<section class="pt-32 pb-16 px-margin-desktop max-w-container-max mx-auto">
+    <div class="space-y-6 border-b border-outline-variant pb-12">
+        <span class="font-label-mono text-label-mono text-primary-container px-3 py-1 border border-primary-container/30 bg-primary-container/10 inline-block uppercase tracking-widest">
+            Project Overview
+        </span>
+        <h1 class="font-headline-xl text-headline-xl text-on-background max-w-3xl">
+            Supply Chain Visibility System
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            A comprehensive web-based platform that provides end-to-end visibility across inventory, procurement, production, sales, and shipment operations.
+        </p>
+    </div>
+</section>
+
+<!-- Case Study Content Grid -->
+<section class="pb-margin-desktop px-margin-desktop max-w-container-max mx-auto space-y-16">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+        <!-- Section 1: Problem -->
+        <div class="glass-panel p-8 space-y-4">
+            <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
+                <span class="material-symbols-outlined text-primary-container">warning</span>
+                Section 1: Problem
+            </h2>
+            <ul class="space-y-3 font-body-md text-on-surface-variant list-disc list-inside mt-4">
+                <li>Inventory discrepancies</li>
+                <li>Manual spreadsheet tracking</li>
+                <li>Poor supply chain visibility</li>
+                <li>Inefficient approval workflows</li>
+                <li>Lack of reporting and analytics</li>
+            </ul>
+        </div>
+
+        <!-- Section 2: Solution & Features -->
+        <div class="glass-panel p-8 space-y-4">
+            <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
+                <span class="material-symbols-outlined text-primary-container">lightbulb</span>
+                Section 2: Solution Features
+            </h2>
+            <ul class="space-y-3 font-body-md text-on-surface-variant list-disc list-inside mt-4">
+                <li>Real-time inventory tracking</li>
+                <li>Purchase Order Management</li>
+                <li>Production &amp; Recipe Tracking</li>
+                <li>Sales Order Processing</li>
+                <li>Shipment Monitoring</li>
+                <li>Reporting &amp; Analytics</li>
+                <li>Role-Based Access Control</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 3: Screenshots -->
+    <div class="space-y-8">
+        <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
+            <span class="material-symbols-outlined text-primary-container">dashboard</span>
+            Section 3: System Interface
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="aspect-video bg-surface-container-low border border-outline-variant flex items-center justify-center flex-col gap-2 group hover:border-primary-container transition-all">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">grid_view</span>
+                <span class="font-label-mono text-on-surface-variant">1. Dashboard</span>
+            </div>
+            <div class="aspect-video bg-surface-container-low border border-outline-variant flex items-center justify-center flex-col gap-2 group hover:border-primary-container transition-all">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">inventory_2</span>
+                <span class="font-label-mono text-on-surface-variant">2. Inventory Page</span>
+            </div>
+            <div class="aspect-video bg-surface-container-low border border-outline-variant flex items-center justify-center flex-col gap-2 group hover:border-primary-container transition-all">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">receipt_long</span>
+                <span class="font-label-mono text-on-surface-variant">3. Purchase Order Module</span>
+            </div>
+            <div class="aspect-video bg-surface-container-low border border-outline-variant flex items-center justify-center flex-col gap-2 group hover:border-primary-container transition-all">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">approval</span>
+                <span class="font-label-mono text-on-surface-variant">4. Approval Workflow</span>
+            </div>
+            <div class="aspect-video bg-surface-container-low border border-outline-variant flex items-center justify-center flex-col gap-2 group hover:border-primary-container transition-all">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">monitoring</span>
+                <span class="font-label-mono text-on-surface-variant">5. Reporting Dashboard</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+        <!-- Section 4: Technologies Used -->
+        <div class="glass-panel p-8 space-y-4">
+            <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
+                <span class="material-symbols-outlined text-primary-container">code</span>
+                Section 4: Tech Stack
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-4">
+                <span class="font-label-mono text-xs bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">PHP 8</span>
+                <span class="font-label-mono text-xs bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">MySQL</span>
+                <span class="font-label-mono text-xs bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">REST-style Architecture</span>
+                <span class="font-label-mono text-xs bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">Role-Based Authentication</span>
+                <span class="font-label-mono text-xs bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">Audit Trails</span>
+                <span class="font-label-mono text-xs bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">Transaction-Based Data Integrity</span>
+            </div>
+        </div>
+
+        <!-- Section 5: Challenges Overcome -->
+        <div class="glass-panel p-8 space-y-4">
+            <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
+                <span class="material-symbols-outlined text-primary-container">architecture</span>
+                Section 5: Challenges
+            </h2>
+            <ul class="space-y-3 font-body-md text-on-surface-variant list-disc list-inside mt-4">
+                <li>Integrating real-time data across decentralized departments</li>
+                <li>Transitioning from legacy spreadsheet workflows to a unified database</li>
+                <li>Maintaining data integrity during concurrent high-volume transactions</li>
+            </ul>
+        </div>
+
+        <!-- Section 6: Results -->
+        <div class="glass-panel p-8 space-y-4">
+            <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
+                <span class="material-symbols-outlined text-primary-container">trending_up</span>
+                Section 6: Results
+            </h2>
+            <ul class="space-y-3 font-body-md text-on-surface-variant list-disc list-inside mt-4">
+                <li>Centralized supply chain operations</li>
+                <li>Improved inventory accuracy</li>
+                <li>Automated approval workflows</li>
+                <li>Faster reporting and decision making</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-surface-container-low border border-primary-container/50 p-12 text-center space-y-6 neon-glow">
+        <span class="w-4 h-4 bg-primary-container rounded-full led-pulse inline-block mb-2"></span>
+        <blockquote class="font-headline-lg text-2xl text-on-background">
+            "Full 5-page technical documentation available upon request."
+        </blockquote>
+        <p class="font-label-mono text-on-surface-variant uppercase tracking-widest max-w-lg mx-auto">
+            Contact me to request the complete documentation, technical walkthrough, or live demo.
+        </p>
+        <div class="pt-6">
+            <a href="index.html#contact" class="bg-primary-container text-white px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest hover:brightness-110 transition-all active:opacity-70 inline-block">
+                Request Access
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant mt-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop py-margin-mobile max-w-container-max mx-auto">
+        <div class="flex flex-col justify-center gap-2">
+            <span class="font-label-mono text-label-mono text-primary uppercase tracking-widest">KENNETH'S PORTFOLIO</span>
+            <p class="font-label-mono text-label-mono text-on-surface-variant">© 2024 Kenneth Beliran // ALL RIGHTS RESERVED</p>
+        </div>
+        <div class="flex md:justify-end items-center gap-8 font-label-mono text-label-mono">
+            <a class="text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Protocol</a>
+            <a class="text-on-surface-variant hover:text-primary transition-all" href="#">Security Logs</a>
+            <a class="text-on-surface-variant hover:text-primary transition-all" href="#">Terminal Access</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Interactive scroll reveals for panels
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+                entry.target.classList.remove('translate-y-10');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.glass-panel, .aspect-video').forEach(el => {
+        el.classList.add('transition-all', 'duration-1000', 'translate-y-10', 'opacity-0');
+        observer.observe(el);
+    });
+</script>
+</body>
+</html>
