@@ -115,14 +115,14 @@
             100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-            animation: marquee 20s linear infinite;
+            animation: marquee 40s linear infinite;
         }
         @keyframes marquee-reverse {
             0% { transform: translateX(-50%); }
             100% { transform: translateX(0); }
         }
         .animate-marquee-reverse {
-            animation: marquee-reverse 20s linear infinite;
+            animation: marquee-reverse 40s linear infinite;
         }
         .led-pulse {
             animation: pulse-led 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -143,7 +143,7 @@
 <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant">
 <div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
 <div class="flex items-center gap-4">
-<span class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-background">KENNETH'S PORTFOLIO</span>
+<a href="#" class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-background uppercase hover:text-primary transition-colors cursor-pointer">HI, I'M KENNETH</a>
 </div>
 <div class="hidden md:flex gap-8 items-center">
 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#about">About</a>
@@ -285,7 +285,7 @@ void main() {
 </div>
 </section>
 <!-- Skills Banner (Marquee) -->
-<section class="py-12 bg-surface-container-lowest border-y border-outline-variant overflow-hidden mt-20 flex flex-col gap-8" id="skills">
+<section class="py-16 bg-surface-container-lowest border-y border-outline-variant overflow-hidden mt-20 flex flex-col gap-16" id="skills">
 <div class="flex animate-marquee whitespace-nowrap gap-16 items-center w-max">
 <span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Turning Ideas Into Systems</span>
 <span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">AI-Assisted Coding</span>
@@ -442,32 +442,32 @@ void main() {
 <div class="glass-panel p-6 border-l-2 border-l-primary-container">
 <span class="font-data-display text-primary-container">01</span>
 <h4 class="font-label-mono font-bold mt-2">UNDERSTAND</h4>
-<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Stakeholder empathy &amp; problem framing.</p>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Identify the real problem and what users actually need.</p>
 </div>
 <div class="glass-panel p-6 border-l-2 border-l-primary-container">
 <span class="font-data-display text-primary-container">02</span>
 <h4 class="font-label-mono font-bold mt-2">BREAK DOWN</h4>
-<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">System decomposition &amp; flow mapping.</p>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Map out the process and break it into simple steps.</p>
 </div>
 <div class="glass-panel p-6 border-l-2 border-l-primary-container">
 <span class="font-data-display text-primary-container">03</span>
 <h4 class="font-label-mono font-bold mt-2">COLLECT</h4>
-<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Empirical data gathering &amp; cleanup.</p>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Gather accurate data to see what is currently happening.</p>
 </div>
 <div class="glass-panel p-6 border-l-2 border-l-primary-container">
 <span class="font-data-display text-primary-container">04</span>
 <h4 class="font-label-mono font-bold mt-2">DESIGN</h4>
-<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Iterative solution prototyping.</p>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Create and test practical solutions.</p>
 </div>
 <div class="glass-panel p-6 border-l-2 border-l-primary-container">
 <span class="font-data-display text-primary-container">05</span>
 <h4 class="font-label-mono font-bold mt-2">IMPLEMENT</h4>
-<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Phased rollout &amp; change mgmt.</p>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Deploy the new system and train the users.</p>
 </div>
 <div class="glass-panel p-6 border-l-2 border-l-primary-container">
 <span class="font-data-display text-primary-container">06</span>
 <h4 class="font-label-mono font-bold mt-2">EVALUATE</h4>
-<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Performance audits &amp; feedback loops.</p>
+<p class="text-[11px] text-on-surface-variant mt-1 font-label-mono">Check the results and make continuous improvements.</p>
 </div>
 </div>
 </div>
@@ -586,7 +586,7 @@ void main() {
 <footer class="bg-surface-container-lowest border-t border-outline-variant">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop py-margin-mobile max-w-container-max mx-auto">
 <div class="flex flex-col justify-center gap-2">
-<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest">KENNETH'S PORTFOLIO</span>
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest">HI, I'M KENNETH</span>
 <p class="font-label-mono text-label-mono text-on-tertiary-fixed-variant">© 2024 Kenneth Beliran // ALL RIGHTS RESERVED</p>
 </div>
 <div class="flex md:justify-end items-center gap-8 font-label-mono text-label-mono">
@@ -601,9 +601,15 @@ void main() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
             });
         });
 
