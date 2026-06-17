@@ -117,6 +117,13 @@
         .animate-marquee {
             animation: marquee 20s linear infinite;
         }
+        @keyframes marquee-reverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .animate-marquee-reverse {
+            animation: marquee-reverse 20s linear infinite;
+        }
         .led-pulse {
             animation: pulse-led 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
@@ -142,7 +149,7 @@
 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#about">About</a>
 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#skills">Skills</a>
 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#projects">Projects</a>
-<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#certifications">Certifications</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#learning">Learning</a>
 </div>
 </div>
 </nav>
@@ -278,19 +285,34 @@ void main() {
 </div>
 </section>
 <!-- Skills Banner (Marquee) -->
-<section class="py-12 bg-surface-container-lowest border-y border-outline-variant overflow-hidden mt-20" id="skills">
-<div class="flex animate-marquee whitespace-nowrap gap-16 items-center">
-<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">EXCEL DASHBOARDS</span>
-<span class="font-label-mono text-headline-lg font-bold text-primary-container/60">POWER BI</span>
-<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">SQL QUERIES</span>
-<span class="font-label-mono text-headline-lg font-bold text-primary-container/60">PYTHON ANALYTICS</span>
-<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">LEAN SIX SIGMA</span>
-<span class="font-label-mono text-headline-lg font-bold text-primary-container/60">OPERATIONS RESEARCH</span>
-<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">SUPPLY CHAIN</span>
+<section class="py-12 bg-surface-container-lowest border-y border-outline-variant overflow-hidden mt-20 flex flex-col gap-8" id="skills">
+<div class="flex animate-marquee whitespace-nowrap gap-16 items-center w-max">
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Turning Ideas Into Systems</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">AI-Assisted Coding</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Building Business Solutions</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">Creating Data Dashboards</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Developing Web Applications</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">Automating Workflows</span>
 <!-- Duplicated for seamless loop -->
-<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">EXCEL DASHBOARDS</span>
-<span class="font-label-mono text-headline-lg font-bold text-primary-container/60">POWER BI</span>
-<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40">SQL QUERIES</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Turning Ideas Into Systems</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">AI-Assisted Coding</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Building Business Solutions</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">Creating Data Dashboards</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Developing Web Applications</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">Automating Workflows</span>
+</div>
+<div class="flex animate-marquee-reverse whitespace-nowrap gap-16 items-center w-max">
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">Designing Scalable Systems</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Transforming Data Into Insights</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">Optimizing Business Processes</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Building SaaS Products</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">Creating Modern Landing Pages</span>
+<!-- Duplicated for seamless loop -->
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">Designing Scalable Systems</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Transforming Data Into Insights</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">Optimizing Business Processes</span>
+<span class="font-label-mono text-headline-lg font-bold text-outline-variant/40 uppercase">Building SaaS Products</span>
+<span class="font-label-mono text-headline-lg font-bold text-primary-container/60 uppercase">Creating Modern Landing Pages</span>
 </div>
 </section>
 <!-- About Section -->
@@ -450,30 +472,83 @@ void main() {
 </div>
 </div>
 </section>
-<!-- Certifications -->
-<section class="py-margin-desktop bg-surface-container-high" id="certifications">
-<div class="px-margin-desktop max-w-container-max mx-auto space-y-12">
-<h2 class="font-headline-lg text-headline-lg border-b border-outline-variant pb-6">Verified Qualifications</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<div class="bg-background p-6 space-y-4 border border-outline-variant neon-glow">
-<span class="material-symbols-outlined text-primary-container text-4xl" style="font-variation-settings: 'FILL' 1;">analytics</span>
-<h3 class="font-label-mono text-label-mono font-bold">Data &amp; Analytics Professional</h3>
-<p class="text-[11px] text-on-surface-variant font-label-mono">Google Data Analytics Professional Certificate</p>
+<!-- Learning Journey -->
+<section class="py-margin-desktop bg-surface-container-high" id="learning">
+<div class="px-margin-desktop max-w-container-max mx-auto space-y-16">
+<h2 class="font-headline-lg text-headline-lg border-b border-outline-variant pb-6">My Learning Journey</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Timeline -->
+<div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-5 before:h-full before:w-0.5 before:bg-outline-variant/50">
+<div class="relative flex items-start gap-6">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface-variant shrink-0 relative z-10">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
 </div>
-<div class="bg-background p-6 space-y-4 border border-outline-variant">
-<span class="material-symbols-outlined text-primary-container text-4xl">manufacturing</span>
-<h3 class="font-label-mono text-label-mono font-bold">Six Sigma Yellow Belt</h3>
-<p class="text-[11px] text-on-surface-variant font-label-mono">Council for Six Sigma Certification (CSSC)</p>
+<div class="glass-panel p-5 border border-outline-variant flex-1">
+<span class="font-label-mono text-primary-container text-xs block mb-1">February 2026</span>
+<p class="font-body-md text-on-surface-variant text-sm">Started exploring AI-assisted development, modern web technologies, and rapid prototyping workflows.</p>
 </div>
-<div class="bg-background p-6 space-y-4 border border-outline-variant">
-<span class="material-symbols-outlined text-primary-container text-4xl">terminal</span>
-<h3 class="font-label-mono text-label-mono font-bold">Python for Engineering</h3>
-<p class="text-[11px] text-on-surface-variant font-label-mono">Coursera Specialization - IBM</p>
 </div>
-<div class="bg-background p-6 space-y-4 border border-outline-variant">
-<span class="material-symbols-outlined text-primary-container text-4xl">inventory_2</span>
-<h3 class="font-label-mono text-label-mono font-bold">Supply Chain Ops</h3>
-<p class="text-[11px] text-on-surface-variant font-label-mono">Rutgers Business School Certification</p>
+<div class="relative flex items-start gap-6">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface-variant shrink-0 relative z-10">
+<span class="material-symbols-outlined text-sm">monitoring</span>
+</div>
+<div class="glass-panel p-5 border border-outline-variant flex-1">
+<span class="font-label-mono text-primary-container text-xs block mb-1">March 2026</span>
+<p class="font-body-md text-on-surface-variant text-sm">Began studying Data Analytics fundamentals, data visualization, and dashboard development.</p>
+</div>
+</div>
+<div class="relative flex items-start gap-6">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface-variant shrink-0 relative z-10">
+<span class="material-symbols-outlined text-sm">code_blocks</span>
+</div>
+<div class="glass-panel p-5 border border-outline-variant flex-1">
+<span class="font-label-mono text-primary-container text-xs block mb-1">April 2026</span>
+<p class="font-body-md text-on-surface-variant text-sm">Built portfolio projects, landing pages, and business-focused web applications while improving problem-solving and system design skills.</p>
+</div>
+</div>
+<div class="relative flex items-start gap-6">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface-variant shrink-0 relative z-10">
+<span class="material-symbols-outlined text-sm">inventory_2</span>
+</div>
+<div class="glass-panel p-5 border border-outline-variant flex-1">
+<span class="font-label-mono text-primary-container text-xs block mb-1">May 2026</span>
+<p class="font-body-md text-on-surface-variant text-sm">Designed and developed a Supply Chain Visibility System featuring inventory management, procurement workflows, production tracking, shipment monitoring, and reporting capabilities.</p>
+</div>
+</div>
+<div class="relative flex items-start gap-6">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary-container bg-surface-container-lowest text-primary-container shrink-0 shadow-[0_0_10px_rgba(190,0,0,0.2)] relative z-10">
+<span class="material-symbols-outlined text-sm">bolt</span>
+</div>
+<div class="glass-panel p-5 border border-outline-variant neon-glow flex-1">
+<span class="font-label-mono text-primary-container text-xs block mb-1">Present</span>
+<p class="font-body-md text-on-surface-variant text-sm">Continuously building real-world projects and expanding my skills in software development, business systems, automation, and analytics.</p>
+</div>
+</div>
+</div>
+<!-- Currently Learning -->
+<div class="space-y-8">
+<div class="glass-panel p-8 border border-outline-variant">
+<h3 class="font-label-mono text-primary-container mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">terminal</span> CURRENTLY LEARNING
+</h3>
+<div class="flex flex-wrap gap-3">
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">Data Analytics</span>
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">Power BI</span>
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">SQL for Data Analysis</span>
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">Business Intelligence</span>
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">Dashboard Development</span>
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">SaaS Development</span>
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">API Integrations</span>
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">Cloud Deployment</span>
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">React &amp; Next.js</span>
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">Workflow Automation</span>
+<span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">AI-Augmented Software Development</span>
+</div>
+</div>
+<div class="glass-panel p-8 border-l-4 border-l-primary-container space-y-4 bg-background/50">
+<p class="font-body-md text-on-surface leading-relaxed">I believe the best way to learn is by building. Every project I create is an opportunity to improve my technical skills, solve real-world problems, and gain hands-on experience with modern technologies.</p>
+<p class="font-label-mono text-primary font-bold pt-4">Always learning. Always building. Always improving. 🚀</p>
+</div>
 </div>
 </div>
 </div>
