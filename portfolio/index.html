@@ -141,11 +141,11 @@
 <body class="bg-background text-on-background selection:bg-primary-container selection:text-white font-body-md overflow-x-hidden">
 <!-- Top Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant">
-<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto gap-4 md:gap-0">
 <div class="flex items-center gap-4">
-<a href="#" class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-background uppercase hover:text-primary transition-colors cursor-pointer">HI, I'M KENNETH</a>
+git <a href="#" class="font-headline-lg text-2xl md:text-headline-lg font-bold tracking-tighter text-on-background uppercase hover:text-primary transition-colors cursor-pointer text-center">HI, I'M KENNETH</a>
 </div>
-<div class="hidden md:flex gap-8 items-center">
+<div class="flex flex-wrap justify-center gap-4 md:gap-8 items-center">
 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#about">About</a>
 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#skills">Skills</a>
 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#projects">Projects</a>
@@ -259,11 +259,11 @@ void main() {
 </script>
 </div>
 <!-- STITCH_SHADER_END:ANIMATION_3 -->
-<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 px-margin-desktop max-w-container-max mx-auto items-center">
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto items-center pt-8 md:pt-0">
 <div class="space-y-8">
 <div class="space-y-4">
 <span class="font-label-mono text-label-mono text-primary-container px-3 py-1 border border-primary-container/30 bg-primary-container/10 inline-block">ENGINEERING ARCHIVE // V1.0</span>
-<h1 class="font-headline-xl text-headline-xl text-on-background max-w-xl">
+<h1 class="font-headline-xl text-4xl md:text-headline-xl text-on-background max-w-xl">
                         Building Smarter Systems Through Data and <span class="text-primary-container">Process Thinking</span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
@@ -276,7 +276,7 @@ void main() {
 </div>
 </div>
 <div class="relative flex justify-center">
-<div class="relative w-[400px] h-[550px] group">
+<div class="relative w-full max-w-[400px] h-[400px] sm:h-[550px] group">
 
 
 <img alt="Industrial Engineering Professional" class="w-full h-full object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700" src="my pic for dark mode.png"/>
@@ -316,7 +316,7 @@ void main() {
 </div>
 </section>
 <!-- About Section -->
-<section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto" id="about">
+<section class="py-12 md:py-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="about">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 <div class="lg:col-span-4">
 <div class="sticky top-24 space-y-4">
@@ -325,7 +325,7 @@ void main() {
 </div>
 </div>
 <div class="lg:col-span-8 space-y-12">
-<div class="glass-panel p-8 space-y-6">
+<div class="glass-panel p-6 md:p-8 space-y-6">
 <div id="intro-preview" class="space-y-4">
 <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
                             Hi, I'm Kenneth Beliran, an Industrial Engineering graduate passionate about solving real-world problems through data, systems thinking, and technology.
@@ -357,7 +357,7 @@ void main() {
 </div>
 </section>
 <!-- Projects Section -->
-<section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto" id="projects">
+<section class="py-12 md:py-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="projects">
 <div class="flex justify-between items-end mb-16">
 <div>
 <h2 class="font-headline-lg text-headline-lg text-on-background">System Deployments</h2>
@@ -429,7 +429,7 @@ void main() {
 </div>
 </section>
 <!-- Workflow Section -->
-<section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto">
+<section class="py-12 md:py-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
 <div class="space-y-8">
 <div class="space-y-4">
@@ -473,8 +473,8 @@ void main() {
 </div>
 </section>
 <!-- Learning Journey -->
-<section class="py-margin-desktop bg-surface-container-high" id="learning">
-<div class="px-margin-desktop max-w-container-max mx-auto space-y-16">
+<section class="py-12 md:py-margin-desktop bg-surface-container-high" id="learning">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-16">
 <h2 class="font-headline-lg text-headline-lg border-b border-outline-variant pb-6">My Learning Journey</h2>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 <!-- Timeline -->
@@ -527,7 +527,7 @@ void main() {
 </div>
 <!-- Currently Learning -->
 <div class="space-y-8">
-<div class="glass-panel p-8 border border-outline-variant">
+<div class="glass-panel p-6 md:p-8 border border-outline-variant">
 <h3 class="font-label-mono text-primary-container mb-6 flex items-center gap-2">
 <span class="material-symbols-outlined text-sm">terminal</span> CURRENTLY LEARNING
 </h3>
@@ -545,7 +545,7 @@ void main() {
 <span class="font-label-mono text-[11px] bg-background text-on-surface-variant px-3 py-1.5 border border-outline-variant">AI-Augmented Software Development</span>
 </div>
 </div>
-<div class="glass-panel p-8 border-l-4 border-l-primary-container space-y-4 bg-background/50">
+<div class="glass-panel p-6 md:p-8 border-l-4 border-l-primary-container space-y-4 bg-background/50">
 <p class="font-body-md text-on-surface leading-relaxed">I believe the best way to learn is by building. Every project I create is an opportunity to improve my technical skills, solve real-world problems, and gain hands-on experience with modern technologies.</p>
 <p class="font-label-mono text-primary font-bold pt-4">Always learning. Always building. Always improving. 🚀</p>
 </div>
@@ -554,13 +554,13 @@ void main() {
 </div>
 </section>
 <!-- Contact Section -->
-<section class="py-margin-desktop px-margin-desktop max-w-container-max mx-auto" id="contact">
+<section class="py-12 md:py-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="contact">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
 <div class="space-y-4">
 <h2 class="font-headline-xl text-headline-xl">Initiate<br/>Communication</h2>
 <p class="font-body-lg text-on-surface-variant max-w-sm">Ready to discuss how my systems-driven approach can optimize your organization's output.</p>
 </div>
-<div class="glass-panel p-8 md:p-12 space-y-6 font-label-mono">
+<div class="glass-panel p-6 md:p-12 space-y-6 font-label-mono">
 <a href="mailto:kbeliran684@gmail.com" class="flex items-center gap-4 group cursor-pointer border border-outline-variant p-4 hover:border-primary-container transition-all hover:bg-surface-container-low">
 <span class="w-10 h-10 flex items-center justify-center bg-background border border-outline-variant group-hover:border-primary-container transition-all shrink-0">
 <span class="material-symbols-outlined text-sm text-primary">mail</span>
@@ -584,12 +584,12 @@ void main() {
 </section>
 <!-- Footer -->
 <footer class="bg-surface-container-lowest border-t border-outline-variant">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop py-margin-mobile max-w-container-max mx-auto">
-<div class="flex flex-col justify-center gap-2">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto text-center md:text-left">
+<div class="flex flex-col justify-center gap-2 items-center md:items-start">
 <span class="font-label-mono text-label-mono text-primary uppercase tracking-widest">HI, I'M KENNETH</span>
 <p class="font-label-mono text-label-mono text-on-tertiary-fixed-variant">© 2024 Kenneth Beliran // ALL RIGHTS RESERVED</p>
 </div>
-<div class="flex md:justify-end items-center gap-8 font-label-mono text-label-mono">
+<div class="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-8 font-label-mono text-label-mono mt-4 md:mt-0">
 <a class="text-on-tertiary-fixed-variant hover:text-primary transition-all" href="#">Privacy Protocol</a>
 <a class="text-on-tertiary-fixed-variant hover:text-primary transition-all" href="#">Security Logs</a>
 <a class="text-on-tertiary-fixed-variant hover:text-primary transition-all" href="#">Terminal Access</a>

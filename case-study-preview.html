@@ -75,9 +75,9 @@
 
 <!-- Top Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant">
-    <div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto gap-4 md:gap-0">
         <div class="flex items-center gap-4">
-            <a href="index.html" class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-background hover:text-primary transition-colors cursor-pointer">
+            <a href="index.html" class="font-headline-lg text-2xl md:text-headline-lg font-bold tracking-tighter text-on-background hover:text-primary transition-colors cursor-pointer text-center">
                 HI, I'M KENNETH
             </a>
         </div>
@@ -91,12 +91,12 @@
 </nav>
 
 <!-- Main Header Section -->
-<section class="pt-32 pb-16 px-margin-desktop max-w-container-max mx-auto">
-    <div class="space-y-6 border-b border-outline-variant pb-12">
+<section class="pt-32 pb-12 md:pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
+    <div class="space-y-6 border-b border-outline-variant pb-12 flex flex-col items-center md:items-start">
         <span class="font-label-mono text-label-mono text-primary-container px-3 py-1 border border-primary-container/30 bg-primary-container/10 inline-block uppercase tracking-widest">
             Project Overview
         </span>
-        <h1 class="font-headline-xl text-headline-xl text-on-background max-w-3xl">
+        <h1 class="font-headline-xl text-4xl md:text-headline-xl text-on-background max-w-3xl">
             Supply Chain Visibility System
         </h1>
         <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
@@ -106,11 +106,11 @@
 </section>
 
 <!-- Case Study Content Grid -->
-<section class="pb-margin-desktop px-margin-desktop max-w-container-max mx-auto space-y-12">
+<section class="pb-12 md:pb-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-12">
     
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
         <!-- 1. Problem -->
-        <div class="glass-panel p-8 space-y-4">
+        <div class="glass-panel p-6 md:p-8 space-y-4">
             <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
                 <span class="material-symbols-outlined text-primary-container">warning</span>
                 1. Problem:
@@ -125,7 +125,7 @@
         </div>
 
         <!-- 2. Solution Features -->
-        <div class="glass-panel p-8 space-y-4">
+        <div class="glass-panel p-6 md:p-8 space-y-4">
             <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
                 <span class="material-symbols-outlined text-primary-container">lightbulb</span>
                 2. Solution Features:
@@ -142,7 +142,7 @@
         </div>
 
         <!-- 3. Tech Stack -->
-        <div class="glass-panel p-8 space-y-4">
+        <div class="glass-panel p-6 md:p-8 space-y-4">
             <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
                 <span class="material-symbols-outlined text-primary-container">code</span>
                 3. Tech Stack:
@@ -158,7 +158,7 @@
         </div>
 
         <!-- 4. Challenges -->
-        <div class="glass-panel p-8 space-y-4">
+        <div class="glass-panel p-6 md:p-8 space-y-4">
             <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
                 <span class="material-symbols-outlined text-primary-container">architecture</span>
                 4. Challenges:
@@ -172,7 +172,7 @@
     </div>
 
     <!-- 5. Results -->
-    <div class="glass-panel p-8 space-y-4 border-t-4 border-t-primary-container">
+    <div class="glass-panel p-6 md:p-8 space-y-4 border-t-4 border-t-primary-container">
         <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3">
                 <span class="material-symbols-outlined text-primary-container">trending_up</span>
                 5. Results:
@@ -194,7 +194,7 @@
     </div>
 
     <!-- 6. System Interface -->
-    <div class="space-y-8 glass-panel p-8">
+    <div class="space-y-8 glass-panel p-6 md:p-8">
         <h2 class="font-headline-lg text-2xl text-on-background flex items-center gap-3 border-l-4 border-primary-container pl-4">
             <span class="material-symbols-outlined text-primary-container">dashboard</span>
             6. System Interface:
@@ -225,7 +225,7 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="bg-surface-container-low border border-primary-container/50 p-12 text-center space-y-6 neon-glow">
+    <div class="bg-surface-container-low border border-primary-container/50 p-8 md:p-12 text-center space-y-6 neon-glow">
         <span class="w-4 h-4 bg-primary-container rounded-full led-pulse inline-block mb-2"></span>
         <blockquote class="font-headline-lg text-2xl text-on-background">
             "Full 5-page technical documentation available upon request."
@@ -243,12 +243,12 @@
 
 <!-- Footer -->
 <footer class="bg-surface-container-lowest border-t border-outline-variant mt-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop py-margin-mobile max-w-container-max mx-auto">
-        <div class="flex flex-col justify-center gap-2">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto text-center md:text-left">
+        <div class="flex flex-col justify-center gap-2 items-center md:items-start">
             <span class="font-label-mono text-label-mono text-primary uppercase tracking-widest">HI, I'M KENNETH</span>
             <p class="font-label-mono text-label-mono text-on-surface-variant">© 2024 Kenneth Beliran // ALL RIGHTS RESERVED</p>
         </div>
-        <div class="flex md:justify-end items-center gap-8 font-label-mono text-label-mono">
+        <div class="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-8 font-label-mono text-label-mono mt-4 md:mt-0">
             <a class="text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Protocol</a>
             <a class="text-on-surface-variant hover:text-primary transition-all" href="#">Security Logs</a>
             <a class="text-on-surface-variant hover:text-primary transition-all" href="#">Terminal Access</a>
